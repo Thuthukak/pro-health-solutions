@@ -7,11 +7,11 @@
 
         <!-- Column 1: Logo & Slogan -->
         <div class="col-md-4 mb-4 mb-md-0">
-          <img :src="seo?.og_image" 
+          <img src="/assets/images/logo/phs_logo_white_hor@2x.png" 
           alt="Logo" 
           class="w-60 mb-3" 
           />
-          <p class="text-white">Transforming brands through design and digital innovation since 2019.</p>
+          <p class="text-white">Billing made simple for every specialty</p>
         </div>
 
         <!-- Column 2: Contact Info -->
@@ -22,14 +22,14 @@
               <div class="text-white p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <span>Kempton Park, Johannesburg</span>
+              <span>Johannesburg</span>
             </li>
             <li class="d-flex align-items-center mb-2">
               <div class="text-white p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
                 <i class="fas fa-phone"></i>
               </div>
               <span>
-                <a class="text-white" href="tel:+27738114652">+27 73 811 4652</a>
+                <a class="text-white" href="tel:+27738114652">(555) 123-4567</a>
               </span>
             </li>
             <li class="d-flex align-items-center">
@@ -37,7 +37,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <span>
-                <a class="text-white" href="mailto:info@pendagraphics.co.za">info@pendagraphics.co.za</a>
+                <a class="text-white" href="mailto:info@pendagraphics.co.za">info@probillsolutions.com</a>
               </span>
             </li>
           </ul>
@@ -47,16 +47,16 @@
         <div class="col-md-4">
           <h5 class="mb-3">Find us on social media</h5>
           <div class="d-flex gap-2">
-            <a href="https://web.facebook.com/Penda.graphix" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://web.facebook.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'facebook']" />
             </a>
-            <a href="https://www.instagram.com/penda_graphics/" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.instagram.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'instagram']" />
             </a>
-            <a href="https://www.youtube.com/@PendaGraphics" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.youtube.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'youtube']" />
             </a>
-            <a href="https://www.tiktok.com/@pendagraphics?_t=ZM-8xCbzWLUJ7Q&_r=1" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.tiktok.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'tiktok']" />
             </a> 
           </div>
@@ -79,7 +79,7 @@
   </footer>
   <!-- Bottom Bar -->
   <div class="bg-white text-black text-center py-3 ">
-    <p class="mb-0">Penda Graphics &copy; {{ currentYear }}. All rights reserved.</p>
+    <p class="mb-0">Pro Health Solutions &copy; {{ currentYear }}. All rights reserved.</p>
     </div>
 </template>
 
@@ -113,7 +113,7 @@
 
 <style scoped>
   .bg-shape-primary {
-    background-color: #383838 !important;
+    background: linear-gradient(135deg, #1b3169, #14244d);
   }
   .foot{
     background-color: #FD7E14 !important;

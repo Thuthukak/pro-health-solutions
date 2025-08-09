@@ -29,7 +29,7 @@
     </Head>
    
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section banner-image">
       <div class="hero-container">
         <div class="hero-content">
           <h1 class="hero-title">
@@ -45,21 +45,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <div class="hero-card">
-            <div class="card-icon">📊</div>
-            <h3>Increase Collections</h3>
-            <p>Maximize revenue with precise billing</p>
-          </div>
-          <div class="hero-card">
-            <div class="card-icon">⚡</div>
-            <h3>Reduce rejections</h3>
-            <p>Minimize claim rejections and delays</p>
-          </div>
-          <div class="hero-card">
-            <div class="card-icon">🎯</div>
-            <h3>Full Compliance</h3>
-            <p>Stay compliant with all regulations</p>
-          </div>
+          <img src="/assets/images/logo/calculator-stethoscope-medicine-bottles-white-background.jpg" alt="Hero Image" class="rounded">
         </div>
       </div>
     </section>
@@ -298,7 +284,7 @@ const scrollToContact = () => {
 
 const submitForm = async () => {
   try {
-    // Handle form submission here
+    const response = await axios.post('/contact-form', form.value);
     console.log('Form submitted:', form.value);
     // Reset form
     form.value = {
@@ -691,6 +677,33 @@ const submitForm = async () => {
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(27, 49, 105, 0.3);
 }
+
+
+/* banner section */
+/* .banner-image {
+  position: relative;
+  background-image: url(/public/assets/images/faq-BG.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.banner-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 91, 91, 0.05);
+  z-index: 1;
+}
+
+.banner-image > * {
+  position: relative;
+  z-index: 2;
+} */
 
 /* Contact Section */
 .contact-section {

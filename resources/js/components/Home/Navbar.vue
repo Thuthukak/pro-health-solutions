@@ -57,13 +57,10 @@
           <a href="/" class="mobile-nav-item">Home</a>
           <a href="#about" class="mobile-nav-item">About Us</a>
           
-          <!-- Mobile Services -->
-          <div>
-            
-              
-           
-            
-          </div>
+          
+          
+            <a href="#services" class="mobile-nav-item">Services</a>
+          
           
           <a href="#why" class="mobile-nav-item">Why Us</a>
           <a href="#contact" class="mobile-nav-item">Contact Us</a>
