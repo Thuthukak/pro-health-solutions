@@ -42,6 +42,13 @@ import {
     faShoppingCart,
     faBullhorn,
     faBoxOpen,
+    faBoxOpen,
+    faReceipt,
+    faInbox,
+    faCreditCard,
+    faArrowsRotate,
+    faUsers,
+    faChartColumn
 } from "@fortawesome/free-solid-svg-icons";
 import { 
     faTiktok,
@@ -87,7 +94,14 @@ library.add(
     faCode,
     faShoppingCart,
     faBullhorn,
-    faBoxOpen
+    faBoxOpen,
+    faBoxOpen,
+    faReceipt,
+    faInbox,
+    faCreditCard,
+    faArrowsRotate,
+    faUsers,
+    faChartColumn
 );
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';

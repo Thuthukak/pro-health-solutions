@@ -14,33 +14,13 @@
         <!-- Navigation Links -->
         <div class="flex space-x-6 items-center">
           <a href="/" class="nav-item">Home</a>
-          <a href="/about-us" class="nav-item">About Us</a>
-
-          <!-- Services Dropdown -->
-          <div class="relative dropdown-container">
-            <button @click.stop="toggleDropdown" class="nav-item dropdown flex items-center">
-              Services
-              <svg class="w-4 h-4 ml-1 transition-transform duration-200" 
-                   :class="{ 'rotate-180': isDropdownOpen }"
-                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div v-if="isDropdownOpen" class="absolute left-0 top-full bg-white shadow-lg py-2 w-48 rounded-lg z-50 border" @click.stop>
-              <a href="/services/web-design" class="dropdown-item">Web Design</a>
-              <a href="/services/graphic-design" class="dropdown-item">Graphic Design</a>
-              <a href="/services/product-design" class="dropdown-item">Product Design</a>
-              <a href="/services/identity-design" class="dropdown-item">Identity Design</a>
-              <a href="/services/e-commerce" class="dropdown-item">E-Commerce</a>
-              <a href="/services/digital-marketing" class="dropdown-item">Digital Marketing</a>
-            </div>
-          </div>
-
-          <a href="/faq" class="nav-item">FAQ</a>
-          <a href="/contact-us" class="nav-item">Contact Us</a>
-          <button @click="openQuoteModal" class="bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600 transition cursor-pointer">
+          <a href="#about" class="nav-item">About Us</a>
+          <a href="#services" class="nav-item">Services</a>
+          <a href="#why" class="nav-item">Why Us</a>
+          <a href="#contact" class="nav-item">Contact Us</a>
+          <!-- <button @click="openQuoteModal" class="bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600 transition cursor-pointer">
             Get Free Quote
-          </button>
+          </button> -->
         </div>
       </div>
 
@@ -57,9 +37,9 @@
         <!-- Mobile Right Section -->
         <div class="flex items-center space-x-3">
           <!-- Mobile Quote Button -->
-          <button @click="openQuoteModal" class="bg-blue-500 px-3 py-1.5 rounded text-white text-sm hover:bg-blue-600 transition">
+          <!-- <button @click="openQuoteModal" class="bg-blue-500 px-3 py-1.5 rounded text-white text-sm hover:bg-blue-600 transition">
             Quote
-          </button>
+          </button> -->
           
           <!-- Mobile Menu Button -->
           <button @click="toggleMobileMenu" class="p-2 rounded-lg hover:bg-gray-100 transition">
@@ -75,30 +55,18 @@
       <div v-if="isMobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
         <div class="py-2 space-y-1">
           <a href="/" class="mobile-nav-item">Home</a>
-          <a href="/about-us" class="mobile-nav-item">About Us</a>
+          <a href="#about" class="mobile-nav-item">About Us</a>
           
           <!-- Mobile Services -->
           <div>
-            <button @click="toggleMobileServices" class="mobile-nav-item mobile-services-button">
-              <span>Services</span>
-              <svg class="w-4 h-4 transition-transform duration-200" 
-                   :class="{ 'rotate-180': isMobileServicesOpen }"
-                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div v-if="isMobileServicesOpen" class="bg-gray-50 border-l-2 border-blue-500 ml-4">
-              <a href="/services/web-design" class="mobile-sub-item">Web Design</a>
-              <a href="/services/graphic-design" class="mobile-sub-item">Graphic Design</a>
-              <a href="/services/product-design" class="mobile-sub-item">Product Design</a>
-              <a href="/services/identity-design" class="mobile-sub-item">Identity Design</a>
-              <a href="/services/e-commerce" class="mobile-sub-item">E-Commerce</a>
-              <a href="/services/digital-marketing" class="mobile-sub-item">Digital Marketing</a>
-            </div>
+            
+              
+           
+            
           </div>
           
-          <a href="/faq" class="mobile-nav-item">FAQ</a>
-          <a href="/contact-us" class="mobile-nav-item">Contact Us</a>
+          <a href="#why" class="mobile-nav-item">Why Us</a>
+          <a href="#contact" class="mobile-nav-item">Contact Us</a>
         </div>
       </div>
     </div>

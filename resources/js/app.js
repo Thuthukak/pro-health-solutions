@@ -46,6 +46,17 @@ import {
     faShoppingCart,
     faBullhorn,
     faBoxOpen,
+    faCreditCard,
+    faArrowsRotate,
+    faUsers,
+    faChartColumn,
+    faHospital,
+    faCircleCheck,
+    faHandshake,
+    faCloud,
+    faChartLine,
+    faPhone,
+    faClock,
 
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -55,6 +66,8 @@ import {
     faInstagram,
     faFacebook
 } from "@fortawesome/free-brands-svg-icons";
+import { faReceipt } from '@fortawesome/free-solid-svg-icons/faReceipt';
+import { faInbox } from '@fortawesome/free-solid-svg-icons/faInbox';
 
 // Add icons to library
 library.add(
@@ -93,7 +106,20 @@ library.add(
     faCode,
     faShoppingCart,
     faBullhorn,
-    faBoxOpen
+    faBoxOpen,
+    faReceipt,
+    faInbox,
+    faCreditCard,
+    faArrowsRotate,
+    faUsers,
+    faChartColumn,
+    faHospital,
+    faCircleCheck,
+    faHandshake,
+    faCloud,
+    faChartLine,
+    faPhone,
+    faClock
 
 );
 
