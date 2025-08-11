@@ -37,7 +37,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <span>
-                <a class="text-white" href="mailto:info@pendagraphics.co.za">info@probillsolutions.com</a>
+                <a class="text-white" href="mailto:info@probillsolutions.co.za">info@probillsolutions.co.za</a>
               </span>
             </li>
           </ul>

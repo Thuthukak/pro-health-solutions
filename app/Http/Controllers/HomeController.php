@@ -115,10 +115,10 @@ class HomeController extends BaseController
     public function AdminAuth () {
 
         $seoData = $this->mergeSeoData([
-            'title' => 'Admin Authentication - Penda Graphics',
-            'description' => 'Admin Authentication page for Penda Graphics',
-            'keywords' => 'Penda Graphics, Web Design, Graphic Design, Branding, E-commerce, Digital Marketing',
-            'og_title' => 'Admin Authentication | Penda Graphics',
+            'title' => 'Admin Authentication - Pro Health Solutions',
+            'description' => 'Admin Authentication page for Pro Health Solutions',
+            'keywords' => 'Pro Health Solutions, medical billing South Africa, revenue cycle management, CPT coding, ICD-10 coding, HCPCS coding, claims submission, rejection management, payment posting, healthcare compliance, patient billing, medical billing services',
+            'og_title' => 'Admin Authentication | Pro Health Solutions',
             'hero_image' => asset('assets/images/3436542.png'),
         ]);
 
@@ -131,14 +131,14 @@ class HomeController extends BaseController
     {
         $seoData = $this->mergeSeoData([
         // Override specific SEO data for this page
-        'title' => 'Professional Graphic Design Services',
-        'description' => 'We specialize in graphic design services, creating visually stunning and engaging designs for businesses and organizations.',
-        'keywords' => 'graphic design, branding, logo design, user-friendly websites',
-        'og_title' => 'Professional Graphic Design Services',
-        'canonical_url' => url('/services/graphic-design'),
+        'title' => 'Medical Billing & Revenue Cycle Management Services | Pro Health Solutions',
+        'description' => 'Pro Health Solutions provides efficient, accurate, and fully compliant medical billing and revenue cycle management services for healthcare providers across all specialties.',
+        'keywords' => 'Pro Health Solutions, medical billing South Africa, revenue cycle management, CPT coding, ICD-10 coding, HCPCS coding, claims submission, denial management, payment posting, healthcare compliance, patient billing, medical billing services',
+        'og_title' => 'Pro Health Solutions | Trusted Medical Billing Partner',
+        'og_description' => 'Tailored medical billing solutions to maximize revenue, reduce administrative burden, and ensure compliance — so you can focus on patient care.',
+        'canonical_url' => url('/service'),
         'sec_img' => asset('assets/images/color-bulb.jpg'),
-
-        ]);
+    ]);
 
         return Inertia::render('Services', [
             'seo' => $seoData
@@ -150,14 +150,14 @@ class HomeController extends BaseController
         {
         $seoData = $this->mergeSeoData([
         // Override specific SEO data for this page
-        'title' => 'Professional Graphic Design Services',
-        'description' => 'We specialize in graphic design services, creating visually stunning and engaging designs for businesses and organizations.',
-        'keywords' => 'graphic design, branding, logo design, user-friendly websites',
-        'og_title' => 'Professional Graphic Design Services',
-        'canonical_url' => url('/services/graphic-design'),
+        'title' => 'Why Choose Pro Health Solutions | Trusted Medical Billing Experts',
+        'description' => 'Discover why healthcare providers across all specialties trust Pro Health Solutions for efficient, accurate, and fully compliant medical billing and revenue cycle management services.',
+        'keywords' => 'Pro Health Solutions, medical billing South Africa, revenue cycle management, healthcare compliance, patient billing, CPT coding, ICD-10 coding, HCPCS coding, claims submission, denial management, payment posting',
+        'og_title' => 'Why Choose Pro Health Solutions | Your Partner in Medical Billing Excellence',
+        'og_description' => 'We combine advanced technology, personalized support, and proven results to help healthcare providers maximize revenue and focus on patient care.',
+        'canonical_url' => url('/why-us'),
         'sec_img' => asset('assets/images/color-bulb.jpg'),
-
-        ]);
+    ]);
 
         return Inertia::render('WhyUs', [
             'seo' => $seoData
@@ -238,64 +238,61 @@ class HomeController extends BaseController
     ]);
 }
 
-    public function AboutUsIndex () {
-
+public function AboutUsIndex()
+{
     $seoData = $this->mergeSeoData([
         // Basic SEO
-        'title' => 'About Us | Digital Design & Development Agency',
-        'description' => 'Discover Penda Graphics\' journey from boutique design studio to comprehensive digital solutions provider. Specializing in web development, branding, graphic design, and digital marketing since 2019.',
-        'keywords' => 'about Penda Graphics, digital design agency, web development company, graphic design studio, branding experts, digital marketing agency, web applications, e-commerce solutions, UI/UX design, Laravel development, Vue.js, responsive web design, logo design, brand identity, Kempton Park, South Africa',
+        'title' => 'About Us | Pro Health Solutions - Medical Billing & Revenue Cycle Experts',
+        'description' => 'Learn about Pro Health Solutions, a trusted South African partner delivering efficient, accurate, and compliant medical billing and revenue cycle management services for healthcare providers across all specialties.',
+        'keywords' => 'about Pro Health Solutions, medical billing South Africa, revenue cycle management, CPT coding, ICD-10 coding, HCPCS coding, claims submission, denial management, payment posting, healthcare compliance, patient billing, medical billing services',
         'canonical_url' => url('/about-us'),
-        
+
         // Open Graph (Facebook, LinkedIn, etc.)
-        'og_title' => 'About Penda Graphics - Digital Design & Development Experts',
-        'og_description' => 'From boutique design studio to full-service digital agency. Transforming brands through innovative design and technology since 2019. Web development, branding, and digital marketing specialists.',
-        'og_image' => asset('assets\images\penda_logo2.png'),
+        'og_title' => 'About Pro Health Solutions - Trusted Medical Billing Partner',
+        'og_description' => 'Pro Health Solutions empowers healthcare providers with seamless, transparent, and accurate revenue cycle solutions so they can focus on exceptional patient care.',
+        'og_image' => asset('assets/images/logo/phs_logo_color_hor@2x.png'),
         'og_url' => url('/about-us'),
         'og_type' => 'website',
-        'og_site_name' => 'Penda Graphics',
-        
+        'og_site_name' => 'Pro Health Solutions',
+
         // Twitter Card
         'twitter_card' => 'summary_large_image',
-        'twitter_title' => 'About Penda Graphics - Digital Design & Development Experts',
-        'twitter_description' => 'From boutique design studio to full-service digital agency. Transforming brands through innovative design and technology since 2019.',
-        'twitter_image' => asset('assets\images\painted_p_logo.png'),
-        
+        'twitter_title' => 'About Pro Health Solutions - Medical Billing Experts',
+        'twitter_description' => 'Delivering dependable, compliant, and tailored medical billing services for doctors of every specialty.',
+        'twitter_image' => asset('assets/images/logo/phs_logo_color_hor@2x.png'),
+
         // Additional SEO data
-        'author' => 'Penda Graphics',
+        'author' => 'Pro Health Solutions',
         'robots' => 'index, follow',
         'revisit_after' => '7 days',
         'language' => 'en-US',
         'geo_region' => 'ZA-GP',
-        'geo_placename' => 'Kempton Park, Gauteng, South Africa',
+        'geo_placename' => 'Johannesburg, Gauteng, South Africa',
         'geo_position' => '-26.1186;28.2294',
         'ICBM' => '-26.1186, 28.2294',
-        
-        // Page-specific images
-        'sec_img' => asset('assets/images/painted_p_logo.png'),
-        'sec_img2' => asset('assets/images/approach.png'),
-        
+
+
         // Breadcrumbs
         'breadcrumbs' => [
             ['name' => 'Home', 'url' => url('/')],
             ['name' => 'About Us', 'url' => url('/about-us')]
         ],
-        
+
         // Additional meta tags
-        'theme_color' => '#005e91',
-        'msapplication_TileColor' => '#005e91',
+        'theme_color' => '#043550ff',
+        'msapplication_TileColor' => '#f6e211ff',
         'apple_mobile_web_app_capable' => 'yes',
         'apple_mobile_web_app_status_bar_style' => 'default',
-        
+
         // Performance and technical SEO
         'preload_images' => [
-            asset('assets/images/painted_p_logo.png'),
-            asset('assets/images/approach.png')
+            asset('assets/images/logo/phs_logo_color_hor@2x.png'),
+            
         ],
-        
+
         // Content freshness
         'last_modified' => now()->toISOString(),
-        'published_time' => '2019-01-01T00:00:00+00:00',
+        'published_time' => '2025-01-01T00:00:00+00:00',
         'modified_time' => now()->toISOString(),
     ]);
 
@@ -303,75 +300,37 @@ class HomeController extends BaseController
     $structuredData = [
         '@context' => 'https://schema.org',
         '@type' => 'Organization',
-        'name' => 'Penda Graphics',
-        'description' => 'Digital design and development agency specializing in web development, branding, graphic design, and digital marketing solutions.',
+        'name' => 'Pro Health Solutions',
+        'description' => 'Pro Health Solutions provides efficient, accurate, and fully compliant medical billing and revenue cycle management services to healthcare providers across all specialties.',
         'url' => url('/'),
-        'logo' => asset('assets/images/penda-graphics-logo.png'),
-        'image' => asset('assets/images/penda-graphics-team.jpg'),
+        'logo' => asset('assets/images/logo/phs_logo_color_hor@2x.png'),
         'address' => [
             '@type' => 'PostalAddress',
-            'streetAddress' => 'Birch Acres',
-            'addressLocality' => 'Kempton Park',
+            'addressLocality' => 'Johannesburg',
             'addressRegion' => 'Gauteng',
             'addressCountry' => 'ZA'
         ],
         'contactPoint' => [
             '@type' => 'ContactPoint',
-            'telephone' => '+27738114652',
-            'email' => 'info@pendagraphics.co.za',
+            'telephone' => ['063 492 3419', '067 935 8660'],
+            'email' => 'info@prohealthsolutions.co.za',
             'contactType' => 'customer service'
         ],
-        'foundingDate' => '2019',
+        'foundingDate' => '2025',
         'sameAs' => [
-            'https://web.facebook.com/Penda.graphix',
-            'https://www.instagram.com/penda_graphics/',
+            'https://www.facebook.com/prohealthsolutions',
+            'https://www.instagram.com/prohealthsolutions/',
         ],
         'hasOfferCatalog' => [
             '@type' => 'OfferCatalog',
-            'name' => 'Digital Services',
+            'name' => 'Medical Billing & Revenue Cycle Services',
             'itemListElement' => [
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'Web Design & Development'
-                    ]
-                ],
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'Graphic Design'
-                    ]
-                ],
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'Brand Identity Design'
-                    ]
-                ],
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'Digital Marketing'
-                    ]
-                ],
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'Web Applications'
-                    ]
-                ],
-                [
-                    '@type' => 'Offer',
-                    'itemOffered' => [
-                        '@type' => 'Service',
-                        'name' => 'E-commerce Solutions'
-                    ]
-                ]
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Medical Billing & Coding']],
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Claims Submission & Follow-Up']],
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Payment Posting & Reconciliation']],
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Denial Management & Appeals']],
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Patient Billing & Support']],
+                ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Customized Reporting & Analytics']],
             ]
         ],
         'openingHoursSpecification' => [
@@ -402,41 +361,41 @@ class HomeController extends BaseController
             'sunday' => 'closed'
         ],
         'contact' => [
-            'phone' => '+27738114652',
-            'email' => 'info@pendagraphics.co.za'
+            'phone' => ['063 492 3419', '067 935 8660'],
+            'email' => 'info@probillsolutions.co.za'
         ],
         'location' => [
-            'address' => 'Birch Acres, Kempton Park, Gauteng, South Africa',
+            'address' => 'Johannesburg, Gauteng, South Africa',
             'coordinates' => [
                 'lat' => -26.1186,
                 'lng' => 28.2294
             ]
         ],
-        'founded' => '2019',
+        'founded' => '2025',
         'services' => [
-            'Web Design & Development',
-            'Graphic Design',
-            'Brand Identity Design',
-            'Digital Marketing',
-            'Web Applications',
-            'E-commerce Solutions'
+            'Medical Billing & Coding',
+            'Claims Submission & Follow-Up',
+            'Payment Posting & Reconciliation',
+            'Denial Management & Appeals',
+            'Patient Billing & Support',
+            'Customized Reporting & Analytics'
         ]
     ];
 
     // Social media links
     $socialMedia = [
-        'facebook' => 'https://web.facebook.com/Penda.graphix',
-        'instagram' => 'https://www.instagram.com/penda_graphics/',
+        'facebook' => 'https://www.facebook.com/prohealthsolutions',
+        'instagram' => 'https://www.instagram.com/prohealthsolutions/',
     ];
 
     // Images for the component
     $images = [
-        'logo' => asset('assets/images/painted_p_logo.png'),
+        'logo' => asset('assets/images/logo/phs_logo_color_hor@2x.png'),
         'approach' => asset('assets/images/approach.png'),
-        'team' => asset('assets\images\painted_p_logo.png'),
-        'company_logo' => asset('public\assets\images\penda_logo2.png')
+        'team' => asset('assets/images/color-bulb.jpg'),
+        'company_logo' => asset('assets/images/phs_logo_color_hor@2x.png')
     ];
-    
+
     return Inertia::render('AboutUS', [
         'seo' => $seoData,
         'structuredData' => $structuredData,
@@ -446,73 +405,72 @@ class HomeController extends BaseController
     ]);
 }
 
-    public function ContactIndex() {
+
+   public function ContactIndex()
+{
     // Customize SEO data for contact page
     $seoData = $this->mergeSeoData([
-        'title' => 'Contact Us | Get in Touch with Penda Graphics',
-        'description' => 'Contact Penda Graphics for professional web design, branding, and digital marketing services in South Africa. Call +27 73 811 4652 or email info@pendagraphics.co.za for a free consultation.',
-        'keywords' => 'contact Penda Graphics, web design consultation, South Africa web design, Kempton Park web design, contact web designer, get quote web design, branding consultation, digital marketing contact',
-        'og_title' => 'Contact Penda Graphics | Professional Web Design & Branding Services',
-        'og_description' => 'Ready to elevate your brand? Contact our expert team for web design, branding, and digital marketing services. Located in Kempton Park, serving all of South Africa.',
+        'title' => 'Contact Us | Pro Health Solutions - Medical Billing & Revenue Cycle Experts',
+        'description' => 'Get in touch with Pro Health Solutions for professional medical billing and revenue cycle management services. Call 063 492 3419 or 067 935 8660 for a consultation.',
+        'keywords' => 'contact Pro Health Solutions, medical billing South Africa, revenue cycle management contact, healthcare billing services, CPT coding contact, ICD-10 coding contact, claims submission contact',
+        'og_title' => 'Contact Pro Health Solutions | Medical Billing Specialists',
+        'og_description' => 'Contact our expert team for tailored medical billing and revenue cycle solutions. Serving healthcare providers across South Africa.',
         'og_type' => 'website',
-        'og_url' => url('/contact'),
-        'canonical_url' => url('/contact'),
-        'twitter_title' => 'Contact Penda Graphics | Web Design & Digital Solutions',
-        'twitter_description' => 'Get in touch with Penda Graphics for professional web design, branding, and digital marketing services in South Africa.',
+        'og_url' => url('/contact-us'),
+        'canonical_url' => url('/contact-us'),
+        'twitter_title' => 'Contact Pro Health Solutions | Medical Billing & Revenue Cycle Experts',
+        'twitter_description' => 'Get in touch with Pro Health Solutions for professional medical billing and revenue cycle management services.',
     ]);
 
-    // Structured Data for SEO (separate from seoData for cleaner organization)
+    // Structured Data for SEO
     $structuredData = [
         '@context' => 'https://schema.org',
         '@type' => 'ContactPage',
         'mainEntity' => [
             '@type' => 'LocalBusiness',
-            'name' => 'Penda Graphics',
-            'description' => 'Professional web design, branding, and digital marketing services',
+            'name' => 'Pro Health Solutions',
+            'description' => 'Efficient, accurate, and fully compliant medical billing and revenue cycle management services.',
             'url' => config('app.url'),
-            'telephone' => '+27738114652',
-            'email' => 'info@pendagraphics.co.za',
+            'telephone' => ['+27634923419', '+27679358660'],
+            'email' => 'info@prohealthsolutions.co.za',
             'address' => [
                 '@type' => 'PostalAddress',
-                'addressLocality' => 'Birch Acres',
+                'addressLocality' => 'Johannesburg',
                 'addressRegion' => 'Gauteng',
-                'addressCountry' => 'ZA',
-                'postalCode' => '1618'
+                'addressCountry' => 'ZA'
             ],
             'geo' => [
                 '@type' => 'GeoCoordinates',
-                'latitude' => -26.052120488886704,
-                'longitude' => 28.182524335456343
+                'latitude' => -26.2041,
+                'longitude' => 28.0473
             ],
-            'openingHours' => 'Mo-Fr 09:00-17:00',
+            'openingHours' => 'Mo-Fr 08:00-17:00',
             'sameAs' => [
-                'https://web.facebook.com/Penda.graphix',
-                'https://www.instagram.com/penda_graphics/',
-                'https://www.youtube.com/@PendaGraphics',
-                'https://www.tiktok.com/@pendagraphics'
+                'https://www.facebook.com/prohealthsolutions',
+                'https://www.instagram.com/prohealthsolutions/'
             ],
-            'priceRange' => '$',
+            'priceRange' => '$$',
             'areaServed' => [
                 '@type' => 'Country',
                 'name' => 'South Africa'
             ],
             'serviceType' => [
-                'Web Design',
-                'Web Development',
-                'Branding',
-                'Graphic Design',
-                'Digital Marketing',
-                'SEO Services'
+                'Medical Billing & Coding',
+                'Claims Submission & Follow-Up',
+                'Payment Posting & Reconciliation',
+                'Denial Management & Appeals',
+                'Patient Billing & Support',
+                'Customized Reporting & Analytics'
             ]
         ]
     ];
 
     // Additional contact-specific data
     $contactInfo = [
-        'phone' => '+27738114652',
-        'email' => 'info@pendagraphics.co.za',
-        'address' => 'Birch Acres, Kempton Park, Gauteng, South Africa',
-        'business_hours' => 'Monday - Friday: 9am - 5pm'
+        'phone' => ['063 492 3419', '067 935 8660'],
+        'email' => 'info@prohealthsolutions.co.za',
+        'address' => 'Johannesburg, Gauteng, South Africa',
+        'business_hours' => 'Monday - Friday: 8am - 5pm'
     ];
 
     return Inertia::render('ContactUs', [

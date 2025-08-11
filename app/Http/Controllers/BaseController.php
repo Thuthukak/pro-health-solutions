@@ -12,14 +12,14 @@ abstract class BaseController extends Controller
     protected function getBaseSeoData()
     {
         return [
-            'title' => 'Home | Creative Web Design, Branding & Digital Solutions',
-            'description' => 'Penda Graphics is a South African creative agency offering professional web design, development, branding, and digital marketing services to help businesses grow online.',
-            'keywords' => 'Penda Graphics, web design South Africa, website development, branding, graphic design, logo design, digital marketing, SEO, UI/UX, Laravel, Vue, e-commerce, identity design',
-            'og_title' => 'Penda Graphics | Elevate Your Brand with Design & Digital Excellence',
-            'og_description' => 'Penda Graphics is a South African creative agency offering professional web design, development, branding, and digital marketing services to help businesses grow online.',
+            'title' => 'Pro Health Solutions | Medical Billing & Revenue Cycle Experts',
+            'description' => 'Pro Health Solutions delivers efficient, accurate, and fully compliant medical billing and revenue cycle management services for healthcare providers across all specialties.',
+            'keywords' => 'Pro Health Solutions, medical billing South Africa, revenue cycle management, CPT coding, ICD-10 coding, HCPCS coding, claims submission, rejection management, payment posting, healthcare compliance, patient billing, medical billing services',
+            'og_title' => 'Pro Health Solutions | Trusted Medical Billing Partner for All Specialties',
+            'og_description' => 'Pro Health Solutions offers tailored medical billing and revenue cycle solutions to help healthcare providers maximize revenue, reduce admin burden, and focus on patient care.',
             'og_image' => asset('assets/images/logo/phs_logo_color_hor@2x.png'),
             'og_type' => 'website',
-            'og_site_name' => 'Penda Graphics',
+            'og_site_name' => 'Pro Health Solutions',
             'og_url' => config('app.url'),
             'twitter_card' => 'summary_large_image',
             'canonical_url' => config('app.url'),

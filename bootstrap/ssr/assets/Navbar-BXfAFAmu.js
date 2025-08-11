@@ -264,15 +264,15 @@ const _sfc_main = {
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_EstimateModal = resolveComponent("EstimateModal");
-  _push(`<!--[--><nav class="bg-shape-primary shadow-md sticky top-0 z-50" data-v-2941d0d3><div class="container mx-auto px-4" data-v-2941d0d3><div class="hidden md:flex justify-between items-center py-4" data-v-2941d0d3><a href="/" class="text-xl font-bold" data-v-2941d0d3><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-40 h-auto" data-v-2941d0d3></a><div class="flex space-x-6 items-center" data-v-2941d0d3><a href="/" class="nav-item" data-v-2941d0d3>Home</a><a href="#about" class="nav-item" data-v-2941d0d3>About Us</a><a href="#services" class="nav-item" data-v-2941d0d3>Services</a><a href="#why" class="nav-item" data-v-2941d0d3>Why Us</a><a href="#contact" class="nav-item" data-v-2941d0d3>Contact Us</a></div></div><div class="md:hidden flex justify-between items-center py-3" data-v-2941d0d3><a href="/" class="text-xl font-bold" data-v-2941d0d3><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-32 h-auto" data-v-2941d0d3></a><div class="flex items-center space-x-3" data-v-2941d0d3><button class="p-2 rounded-lg hover:bg-gray-100 transition" data-v-2941d0d3><svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-2941d0d3>`);
+  _push(`<!--[--><nav class="bg-shape-primary shadow-md sticky top-0 z-50" data-v-30f8e327><div class="container mx-auto px-4" data-v-30f8e327><div class="hidden md:flex justify-between items-center py-4" data-v-30f8e327><a href="/" class="text-xl font-bold" data-v-30f8e327><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-40 h-auto" data-v-30f8e327></a><div class="flex space-x-6 items-center" data-v-30f8e327><a href="/" class="nav-item" data-v-30f8e327>Home</a><a href="/about-us" class="nav-item" data-v-30f8e327>About Us</a><a href="/service" class="nav-item" data-v-30f8e327>Services</a><a href="/why-us" class="nav-item" data-v-30f8e327>Why Us</a><a href="/contact-us" class="nav-item" data-v-30f8e327>Contact Us</a></div></div><div class="md:hidden flex justify-between items-center py-3" data-v-30f8e327><a href="/" class="text-xl font-bold" data-v-30f8e327><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-32 h-auto" data-v-30f8e327></a><div class="flex items-center space-x-3" data-v-30f8e327><button class="p-2 rounded-lg hover:bg-gray-100 transition" data-v-30f8e327><svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-30f8e327>`);
   if (!$data.isMobileMenuOpen) {
-    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-v-2941d0d3></path>`);
+    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-v-30f8e327></path>`);
   } else {
-    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" data-v-2941d0d3></path>`);
+    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" data-v-30f8e327></path>`);
   }
   _push(`</svg></button></div></div>`);
   if ($data.isMobileMenuOpen) {
-    _push(`<div class="md:hidden bg-white border-t border-gray-200" data-v-2941d0d3><div class="py-2 space-y-1" data-v-2941d0d3><a href="/" class="mobile-nav-item" data-v-2941d0d3>Home</a><a href="#about" class="mobile-nav-item" data-v-2941d0d3>About Us</a><a href="#services" class="mobile-nav-item" data-v-2941d0d3>Services</a><a href="#why" class="mobile-nav-item" data-v-2941d0d3>Why Us</a><a href="#contact" class="mobile-nav-item" data-v-2941d0d3>Contact Us</a></div></div>`);
+    _push(`<div class="md:hidden bg-white border-t border-gray-200" data-v-30f8e327><div class="py-2 space-y-1" data-v-30f8e327><a href="/" class="mobile-nav-item" data-v-30f8e327>Home</a><a href="/about-us" class="mobile-nav-item" data-v-30f8e327>About Us</a><a href="/service" class="mobile-nav-item" data-v-30f8e327>Services</a><a href="/why-us" class="mobile-nav-item" data-v-30f8e327>Why Us</a><a href="/contact-us" class="mobile-nav-item" data-v-30f8e327>Contact Us</a></div></div>`);
   } else {
     _push(`<!---->`);
   }
@@ -289,7 +289,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Home/Navbar.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const Navbar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-2941d0d3"]]);
+const Navbar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-30f8e327"]]);
 export {
   Navbar as N,
   _export_sfc as _

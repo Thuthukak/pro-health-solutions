@@ -111,49 +111,12 @@ export default {
       type: Object,
       required: true
     },
-    structuredData: {
-      type: Object,
-      required: true
-    },
-    businessInfo: {
-      type: Object,
-      required: true
-    },
-    socialMedia: {
-      type: Object,
-      required: true
-    },
-    images: {
-      type: Object,
-      required: true
-    }
   },
   setup(props) {
     // Computed property to JSON encode structured data
     const structuredDataJson = computed(() => {
       return JSON.stringify(props.structuredData)
     })
-    
-    onMounted(() => {
-      // You can now use the structured data in your component logic
-      // console.log('Structured Data:', props.structuredData)
-      // console.log('Business Info:', props.businessInfo)
-      // console.log('Social Media:', props.socialMedia)
-      // console.log('Images:', props.images)
-      
-      // Example: Initialize a map with the coordinates
-      if (props.businessInfo.location.coordinates) {
-        const { lat, lng } = props.businessInfo.location.coordinates
-        // Initialize your map here
-        // console.log(`Map coordinates: ${lat}, ${lng}`)
-      }
-      
-      // Example: Set up social media tracking
-      Object.entries(props.socialMedia).forEach(([platform, url]) => {
-        // console.log(`${platform}: ${url}`)
-      })
-    })
-    
     return {
       structuredDataJson
     }

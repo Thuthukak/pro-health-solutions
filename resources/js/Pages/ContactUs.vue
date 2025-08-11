@@ -24,7 +24,7 @@
       <meta name="contact:phone" :content="contactInfo?.phone" />
       <meta name="contact:email" :content="contactInfo?.email" />
       <meta name="geo.region" content="ZA-GP" />
-      <meta name="geo.placename" content="Kempton Park" />
+      <meta name="geo.placename" content="Johannesburg" />
       <meta name="geo.position" content="-26.052120488886704;28.182524335456343" />
       <meta name="ICBM" content="-26.052120488886704, 28.182524335456343" />
       
@@ -46,7 +46,7 @@
               <div class="contact-icon"><font-awesome-icon :icon="['fas', 'envelope']" style="color: #1b3169;"></font-awesome-icon></div>
               <div>
                 <h4>Email</h4>
-                <p>info@probillsolutions.com</p>
+                <p>info@probillsolutions.co.za</p>
               </div>
             </div>
             <div class="contact-item">

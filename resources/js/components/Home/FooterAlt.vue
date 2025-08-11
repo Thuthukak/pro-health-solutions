@@ -29,7 +29,7 @@
                 <i class="fas fa-phone"></i>
               </div>
               <span>
-                <a class="text-custom-blue" href="tel:+27738114652">0634923419 | 0679358660</a>
+                <a class="text-custom-blue" href="tel:+27634923419">0634923419 | 0679358660</a>
               </span>
             </li>
             <li class="d-flex align-items-center">
@@ -37,7 +37,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <span>
-                <a class="text-custom-blue" href="mailto:info@pendagraphics.co.za">info@probillsolutions.com</a>
+                <a class="text-custom-blue" href="mailto:info@probillsolutions.co.za">info@probillsolutions.co.za</a>
               </span>
             </li>
           </ul>

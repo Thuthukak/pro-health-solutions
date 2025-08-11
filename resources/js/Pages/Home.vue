@@ -311,6 +311,8 @@ const submitForm = async () => {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     gap: 40px;
   }
   
