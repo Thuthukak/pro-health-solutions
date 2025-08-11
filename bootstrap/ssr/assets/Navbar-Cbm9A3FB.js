@@ -264,27 +264,15 @@ const _sfc_main = {
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_EstimateModal = resolveComponent("EstimateModal");
-  _push(`<!--[--><nav class="bg-shape-primary shadow-md sticky top-0 z-50" data-v-e566941a><div class="container mx-auto px-4" data-v-e566941a><div class="hidden md:flex justify-between items-center py-4" data-v-e566941a><a href="/" class="text-xl font-bold" data-v-e566941a><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-40 h-auto" data-v-e566941a></a><div class="flex space-x-6 items-center" data-v-e566941a><a href="/" class="nav-item" data-v-e566941a>Home</a><a href="/about-us" class="nav-item" data-v-e566941a>About Us</a><div class="relative dropdown-container" data-v-e566941a><button class="nav-item dropdown flex items-center" data-v-e566941a> Services <svg class="${ssrRenderClass([{ "rotate-180": $data.isDropdownOpen }, "w-4 h-4 ml-1 transition-transform duration-200"])}" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-e566941a><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" data-v-e566941a></path></svg></button>`);
-  if ($data.isDropdownOpen) {
-    _push(`<div class="absolute left-0 top-full bg-white shadow-lg py-2 w-48 rounded-lg z-50 border" data-v-e566941a><a href="/services/web-design" class="dropdown-item" data-v-e566941a>Web Design</a><a href="/services/graphic-design" class="dropdown-item" data-v-e566941a>Graphic Design</a><a href="/services/product-design" class="dropdown-item" data-v-e566941a>Product Design</a><a href="/services/identity-design" class="dropdown-item" data-v-e566941a>Identity Design</a><a href="/services/e-commerce" class="dropdown-item" data-v-e566941a>E-Commerce</a><a href="/services/digital-marketing" class="dropdown-item" data-v-e566941a>Digital Marketing</a></div>`);
-  } else {
-    _push(`<!---->`);
-  }
-  _push(`</div><a href="/faq" class="nav-item" data-v-e566941a>FAQ</a><a href="/contact-us" class="nav-item" data-v-e566941a>Contact Us</a><button class="bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600 transition cursor-pointer" data-v-e566941a> Get Free Quote </button></div></div><div class="md:hidden flex justify-between items-center py-3" data-v-e566941a><a href="/" class="text-xl font-bold" data-v-e566941a><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-32 h-auto" data-v-e566941a></a><div class="flex items-center space-x-3" data-v-e566941a><button class="bg-blue-500 px-3 py-1.5 rounded text-white text-sm hover:bg-blue-600 transition" data-v-e566941a> Quote </button><button class="p-2 rounded-lg hover:bg-gray-100 transition" data-v-e566941a><svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-e566941a>`);
+  _push(`<!--[--><nav class="bg-shape-primary shadow-md sticky top-0 z-50" data-v-2941d0d3><div class="container mx-auto px-4" data-v-2941d0d3><div class="hidden md:flex justify-between items-center py-4" data-v-2941d0d3><a href="/" class="text-xl font-bold" data-v-2941d0d3><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-40 h-auto" data-v-2941d0d3></a><div class="flex space-x-6 items-center" data-v-2941d0d3><a href="/" class="nav-item" data-v-2941d0d3>Home</a><a href="#about" class="nav-item" data-v-2941d0d3>About Us</a><a href="#services" class="nav-item" data-v-2941d0d3>Services</a><a href="#why" class="nav-item" data-v-2941d0d3>Why Us</a><a href="#contact" class="nav-item" data-v-2941d0d3>Contact Us</a></div></div><div class="md:hidden flex justify-between items-center py-3" data-v-2941d0d3><a href="/" class="text-xl font-bold" data-v-2941d0d3><img${ssrRenderAttr("src", $props.seo.og_image)} alt="Logo" class="w-32 h-auto" data-v-2941d0d3></a><div class="flex items-center space-x-3" data-v-2941d0d3><button class="p-2 rounded-lg hover:bg-gray-100 transition" data-v-2941d0d3><svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-2941d0d3>`);
   if (!$data.isMobileMenuOpen) {
-    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-v-e566941a></path>`);
+    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-v-2941d0d3></path>`);
   } else {
-    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" data-v-e566941a></path>`);
+    _push(`<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" data-v-2941d0d3></path>`);
   }
   _push(`</svg></button></div></div>`);
   if ($data.isMobileMenuOpen) {
-    _push(`<div class="md:hidden bg-white border-t border-gray-200" data-v-e566941a><div class="py-2 space-y-1" data-v-e566941a><a href="/" class="mobile-nav-item" data-v-e566941a>Home</a><a href="/about-us" class="mobile-nav-item" data-v-e566941a>About Us</a><div data-v-e566941a><button class="mobile-nav-item mobile-services-button" data-v-e566941a><span data-v-e566941a>Services</span><svg class="${ssrRenderClass([{ "rotate-180": $data.isMobileServicesOpen }, "w-4 h-4 transition-transform duration-200"])}" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-e566941a><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" data-v-e566941a></path></svg></button>`);
-    if ($data.isMobileServicesOpen) {
-      _push(`<div class="bg-gray-50 border-l-2 border-blue-500 ml-4" data-v-e566941a><a href="/services/web-design" class="mobile-sub-item" data-v-e566941a>Web Design</a><a href="/services/graphic-design" class="mobile-sub-item" data-v-e566941a>Graphic Design</a><a href="/services/product-design" class="mobile-sub-item" data-v-e566941a>Product Design</a><a href="/services/identity-design" class="mobile-sub-item" data-v-e566941a>Identity Design</a><a href="/services/e-commerce" class="mobile-sub-item" data-v-e566941a>E-Commerce</a><a href="/services/digital-marketing" class="mobile-sub-item" data-v-e566941a>Digital Marketing</a></div>`);
-    } else {
-      _push(`<!---->`);
-    }
-    _push(`</div><a href="/faq" class="mobile-nav-item" data-v-e566941a>FAQ</a><a href="/contact-us" class="mobile-nav-item" data-v-e566941a>Contact Us</a></div></div>`);
+    _push(`<div class="md:hidden bg-white border-t border-gray-200" data-v-2941d0d3><div class="py-2 space-y-1" data-v-2941d0d3><a href="/" class="mobile-nav-item" data-v-2941d0d3>Home</a><a href="#about" class="mobile-nav-item" data-v-2941d0d3>About Us</a><a href="#services" class="mobile-nav-item" data-v-2941d0d3>Services</a><a href="#why" class="mobile-nav-item" data-v-2941d0d3>Why Us</a><a href="#contact" class="mobile-nav-item" data-v-2941d0d3>Contact Us</a></div></div>`);
   } else {
     _push(`<!---->`);
   }
@@ -301,9 +289,8 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Home/Navbar.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const Navbar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-e566941a"]]);
+const Navbar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-2941d0d3"]]);
 export {
-  EstimateModal as E,
   Navbar as N,
   _export_sfc as _
 };

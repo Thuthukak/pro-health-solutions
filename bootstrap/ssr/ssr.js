@@ -7,7 +7,7 @@ import createServer from "@inertiajs/core/server";
 import { stringify, parse } from "qs";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faBars, faMoon, faFileInvoiceDollar, faSun, faGlobe, faUser, faBell, faCog, faTrash, faEye, faFilePdf, faHome, faSignOutAlt, faClipboardList, faCalendarAlt, faSpinner, faEnvelope, faMailForward, faPaperPlane, faPaintBrush, faCheck, faLightbulb, faPalette, faDesktop, faSignature, faIdBadge, faPencilRuler, faLaptopCode, faCode, faShoppingCart, faBullhorn, faBoxOpen } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMoon, faFileInvoiceDollar, faSun, faGlobe, faUser, faBell, faCog, faTrash, faEye, faFilePdf, faHome, faSignOutAlt, faClipboardList, faCalendarAlt, faSpinner, faEnvelope, faMailForward, faPaperPlane, faPaintBrush, faCheck, faLightbulb, faPalette, faDesktop, faSignature, faIdBadge, faPencilRuler, faLaptopCode, faCode, faShoppingCart, faBullhorn, faBoxOpen, faReceipt, faInbox, faCreditCard, faArrowsRotate, faUsers, faChartColumn, faHospital, faCircleCheck, faHandshake, faCloud, faChartLine, faPhone, faClock } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
 var G = { created() {
   if (!this.$options.remember) return;
@@ -386,15 +386,28 @@ library.add(
   faCode,
   faShoppingCart,
   faBullhorn,
-  faBoxOpen
+  faBoxOpen,
+  faReceipt,
+  faInbox,
+  faCreditCard,
+  faArrowsRotate,
+  faUsers,
+  faChartColumn,
+  faHospital,
+  faCircleCheck,
+  faHandshake,
+  faCloud,
+  faChartLine,
+  faPhone,
+  faClock
 );
-const appName = "Penda Graphics";
+const appName = "Pro Health Solutions";
 createServer(
   (page) => K({
     page,
     render: renderToString,
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({ "./Pages/AboutUS.vue": () => import("./assets/AboutUS-CLv8H0rC.js"), "./Pages/Admin.vue": () => import("./assets/Admin-B5yhdTCF.js"), "./Pages/ContactUs.vue": () => import("./assets/ContactUs-1f0TB3ds.js"), "./Pages/Faq.vue": () => import("./assets/Faq-BNnWJzOc.js"), "./Pages/Home.vue": () => import("./assets/Home-DYeKwiXk.js"), "./Pages/Services/DigitalMarketing.vue": () => import("./assets/DigitalMarketing-BswYQB65.js"), "./Pages/Services/ECommerce.vue": () => import("./assets/ECommerce-CWfQQr8w.js"), "./Pages/Services/GraphicDesign.vue": () => import("./assets/GraphicDesign-s4HUuzXb.js"), "./Pages/Services/IdentityDesign.vue": () => import("./assets/IdentityDesign-B_R2vJL_.js"), "./Pages/Services/ProductDesign.vue": () => import("./assets/ProductDesign-LME5eZiS.js"), "./Pages/Services/WebDesign.vue": () => import("./assets/WebDesign-B4lEWkUu.js") })),
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({ "./Pages/AboutUS.vue": () => import("./assets/AboutUS-tqwjlQyS.js"), "./Pages/Admin.vue": () => import("./assets/Admin-Mos0tR6G.js"), "./Pages/ContactUs.vue": () => import("./assets/ContactUs-BMXy03NA.js"), "./Pages/Faq.vue": () => import("./assets/Faq-SlMuyMzC.js"), "./Pages/Home.vue": () => import("./assets/Home-TdVdSeH6.js"), "./Pages/Services/DigitalMarketing.vue": () => import("./assets/DigitalMarketing-CHD6oXR4.js"), "./Pages/Services/ECommerce.vue": () => import("./assets/ECommerce-DNRdm88y.js"), "./Pages/Services/GraphicDesign.vue": () => import("./assets/GraphicDesign-KXnHkuyg.js"), "./Pages/Services/IdentityDesign.vue": () => import("./assets/IdentityDesign-DYoiGWjZ.js"), "./Pages/Services/ProductDesign.vue": () => import("./assets/ProductDesign-0UlOS_RU.js"), "./Pages/Services/WebDesign.vue": () => import("./assets/WebDesign-CYWFryYy.js") })),
     setup({ App, props, plugin }) {
       return createSSRApp({ render: () => h(App, props) }).use(plugin).use(o, {
         ...page.props.ziggy,

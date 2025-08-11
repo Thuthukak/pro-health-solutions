@@ -1,5 +1,5 @@
-import { _ as _export_sfc, N as Navbar } from "./Navbar-B2dw1uDe.js";
-import { F as Footer } from "./Footer-Cv32ksWL.js";
+import { _ as _export_sfc, N as Navbar } from "./Navbar-Cbm9A3FB.js";
+import { F as Footer } from "./Footer-DX5y-tbw.js";
 import { resolveComponent, mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot } from "vue/server-renderer";
 const _sfc_main = {

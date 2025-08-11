@@ -42,7 +42,6 @@ import {
     faShoppingCart,
     faBullhorn,
     faBoxOpen,
-    faBoxOpen,
     faReceipt,
     faInbox,
     faCreditCard,
@@ -67,7 +66,7 @@ import {
 // Add icons to library - SAME as app.js
 library.add(
     faBars,
-    faFacebook,
+faFacebook,
     faInstagram,
     faYoutube,
     faTiktok, 
@@ -101,7 +100,6 @@ library.add(
     faCode,
     faShoppingCart,
     faBullhorn,
-    faBoxOpen,
     faBoxOpen,
     faReceipt,
     faInbox,

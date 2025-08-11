@@ -1,7 +1,7 @@
 import { ref, mergeProps, useSSRContext, unref, withCtx, createVNode, toDisplayString } from "vue";
 import { ssrRenderAttrs, ssrRenderAttr, ssrRenderList, ssrRenderClass, ssrRenderComponent, ssrInterpolate, ssrRenderStyle } from "vue/server-renderer";
-import { _ as _export_sfc, N as Navbar } from "./Navbar-B2dw1uDe.js";
-import { F as Footer } from "./Footer-Cv32ksWL.js";
+import { _ as _export_sfc, N as Navbar } from "./Navbar-Cbm9A3FB.js";
+import { F as Footer } from "./Footer-DX5y-tbw.js";
 import { g as ge } from "../ssr.js";
 import "axios";
 import "@vue/server-renderer";
