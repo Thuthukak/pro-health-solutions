@@ -44,18 +44,20 @@ Route::prefix('admin')->group(function () {
 //Auth and Non-authenticated users
     Route::get('/', [HomeController::class, 'Home'])->name('home');
 
-    Route::prefix('services')->group(function () {
-        Route::get('/web-design', [ServicesController::class, 'indexWebDesign'])->name('web-design.index');
-        Route::get('/graphic-design', [ServicesController::class, 'indexGraphicDesign'])->name('graphic-design.index');
-        Route::get('/product-design', [ServicesController::class, 'indexProductDesign'])->name('product-design.index');
-        Route::get('/identity-design', [ServicesController::class, 'indexIdentityDesign'])->name('identity-design.index');
-        Route::get('/e-commerce', [ServicesController::class, 'indexECommerce'])->name('e-commerce.index');
-        Route::get('/digital-marketing', [ServicesController::class, 'indexDigitalMarketing'])->name('digital-marketing.index');
+    // Route::prefix('services')->group(function () {
+    //     Route::get('/web-design', [ServicesController::class, 'indexWebDesign'])->name('web-design.index');
+    //     Route::get('/graphic-design', [ServicesController::class, 'indexGraphicDesign'])->name('graphic-design.index');
+    //     Route::get('/product-design', [ServicesController::class, 'indexProductDesign'])->name('product-design.index');
+    //     Route::get('/identity-design', [ServicesController::class, 'indexIdentityDesign'])->name('identity-design.index');
+    //     Route::get('/e-commerce', [ServicesController::class, 'indexECommerce'])->name('e-commerce.index');
+    //     Route::get('/digital-marketing', [ServicesController::class, 'indexDigitalMarketing'])->name('digital-marketing.index');
         
-    });
+    // });
 
+    Route::get('/service', [HomeController::class, 'ServiceIndex'])->name('service.index');
+    Route::get('/why-us', [HomeController::class, 'whyUsIndex'])->name('why-us.index');
     Route::post('/contact-form', [ContactController::class, 'contactForm'])->name('contact.form');
-    Route::get('/faq', [HomeController::class, 'FaqIndex'])->name('faq.index');
+    // Route::get('/faq', [HomeController::class, 'FaqIndex'])->name('faq.index');
     Route::get('/about-us', [HomeController::class, 'AboutUsIndex'])->name('about-us.index');
     Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
     Route::get('/contact-us', [HomeController::class, 'ContactIndex'])->name('contact.index');

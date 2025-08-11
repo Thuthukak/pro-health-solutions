@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-shape-primary text-white py-5">
+  <footer class="bg-shape-primary text-custom-blue py-5">
     <div class="container px-4">
       
       <!-- Row for Layout -->
@@ -7,11 +7,11 @@
 
         <!-- Column 1: Logo & Slogan -->
         <div class="col-md-4 mb-4 mb-md-0">
-          <img src="/assets/images/logo/phs_logo_white_hor@2x.png" 
+          <img src="/assets/images/logo/phs_logo_black_hor@2x.png" 
           alt="Logo" 
           class="w-60 mb-3" 
           />
-          <p class="text-white">Billing made simple for every specialty</p>
+          <p class="text-custom-blue">Billing made simple for every specialty</p>
         </div>
 
         <!-- Column 2: Contact Info -->
@@ -19,25 +19,25 @@
           <h5 class="mb-3 fw-bold">Contact Us</h5>
           <ul class="list-unstyled">
             <li class="d-flex align-items-center mb-2">
-              <div class="text-white p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+              <div class="text-custom-blue p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <span>Johannesburg</span>
             </li>
             <li class="d-flex align-items-center mb-2">
-              <div class="text-white p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+              <div class="text-custom-blue p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
                 <i class="fas fa-phone"></i>
               </div>
               <span>
-                <a class="text-white" href="tel:+27738114652">0634923419 | 0679358660</a>
+                <a class="text-custom-blue" href="tel:+27738114652">0634923419 | 0679358660</a>
               </span>
             </li>
             <li class="d-flex align-items-center">
-              <div class="text-white p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+              <div class="text-custom-blue p-2 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
                 <i class="fas fa-envelope"></i>
               </div>
               <span>
-                <a class="text-white" href="mailto:info@pendagraphics.co.za">info@probillsolutions.com</a>
+                <a class="text-custom-blue" href="mailto:info@pendagraphics.co.za">info@probillsolutions.com</a>
               </span>
             </li>
           </ul>
@@ -47,16 +47,16 @@
         <div class="col-md-4">
           <h5 class="mb-3 fw-bold">Find us on social media</h5>
           <div class="d-flex gap-2">
-            <a href="https://web.facebook.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://web.facebook.com" class="text-custom-blue p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'facebook']" />
             </a>
-            <a href="https://www.instagram.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.instagram.com" class="text-custom-blue p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'instagram']" />
             </a>
-            <a href="https://www.youtube.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.youtube.com" class="text-custom-blue p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'youtube']" />
             </a>
-            <a href="https://www.tiktok.com" class="text-white p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <a href="https://www.tiktok.com" class="text-custom-blue p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
               <font-awesome-icon :icon="['fab', 'tiktok']" />
             </a> 
           </div>
@@ -112,10 +112,62 @@
 </script>
 
 <style scoped>
-  .bg-shape-primary {
-    background: linear-gradient(135deg, #1b3169, #14244d);
-  }
-  .foot{
-    background-color: #FD7E14 !important;
-  }
+/* Color Variables */
+:root {
+  --primary-blue: #ffd400;
+  --secondary-blue:#d99800 ;
+  --primary-yellow: #1b3169;
+  --secondary-yellow: #14244d;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --dark-gray: #333333;
+  --text-gray: #666666;
+}
+.bg-shape-primary {
+  background: linear-gradient(135deg, #ffd400 0%, #ffd400 100%);
+}
+h5 {
+  color: #1b3169;
+
+}
+.text-custom-blue {
+  color: #1b3169;
+
+}
+
+.btn-primary, .btn-secondary {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #1b3169;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-yellow);
+  transform: translateY(-2px);
+
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
 </style>

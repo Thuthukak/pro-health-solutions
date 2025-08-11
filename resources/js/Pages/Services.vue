@@ -45,42 +45,49 @@
       
       <!-- Structured Data will be added via JavaScript -->
     </Head>
-  <!-- <Navbar :seo="seo"/> -->
-        <!-- About Us Section -->
-    <section class="about-section" id="about">
+
+      <!-- Services Section -->
+    <section class="services-section" id="services">
       <div class="container">
         <div class="section-header">
-          <h2>About Pro Bill Solutions</h2>
-          <p>Your trusted partner in medical billing excellence</p>
+          <h2>Our Comprehensive Services</h2>
+          <p>End-to-end medical billing and revenue cycle management solutions</p>
         </div>
-        <div class="about-content">
-          <div class="about-text">
-            <h3 class="fw-bold">Our Mission</h3>
-            <p>
-              Our mission is to deliver dependable, compliant, and tailored medical billing services to doctors of every specialty. We are committed to maximizing your revenue through precise and timely billing, reducing your administrative burden, supporting your growth with personalized solutions, and staying ahead of healthcare regulations and industry changes.
-            </p>
-            <h3 class="fw-bold">Our Vision</h3>
-            <p>
-              We aim to be the most trusted and innovative medical billing partner for healthcare providers across all specialties. We empower practices with seamless, transparent, and accurate revenue cycle solutions—so you can focus on delivering exceptional patient care while we handle the business side with excellence.
-            </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'receipt']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Medical Billing & Coding</h3>
+            <p>Accurate CPT, ICD-10, and HCPCS coding to ensure maximum reimbursement and compliance with payer requirements.</p>
           </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Compliance Rate</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Support Available</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">All</div>
-              <div class="stat-label">Specialties Welcome</div>
-            </div>
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'inbox']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Claims Submission & Follow-Up</h3>
+            <p>We handle all aspects of claims processing, including electronic submission, tracking, and follow-up to minimize rejections and delays.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'credit-card']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Payment Posting & Reconciliation</h3>
+            <p>Our team ensures all payments are posted accurately and reconciled against claims to keep your accounts balanced and transparent.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'arrows-rotate']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Rejection Management & Appeals</h3>
+            <p>We identify the root cause of rejections and aggressively pursue appeals to recover lost revenue.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'users']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Patient Billing & Support</h3>
+            <p>We offer clear, compassionate patient statements and support for any billing questions—reducing confusion and improving satisfaction.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><font-awesome-icon :icon="['fas', 'chart-column']" style="color: #1b3169;"></font-awesome-icon></div>
+            <h3>Customized Reporting & Analytics</h3>
+            <p>Gain insights into your financial performance with real-time, customized reports tailored to your practice's goals.</p>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+
   
   </Layout>
 </template>
@@ -92,7 +99,7 @@ import { onMounted, computed } from 'vue'
 import { Head } from '@inertiajs/vue3'
 
 export default {
-  name: 'AboutUS',
+  name: 'Services',
   components: { Layout, Head },
   props: {
     seo: {
@@ -233,67 +240,51 @@ export default {
   color: var(--primary-blue);
   transform: translateY(-2px);
 }
-/* About Section */
-.about-section {
+/* Services Section */
+.services-section {
   padding: 100px 0;
-  background: var(--light-gray);
+  background: var(--white);
 }
 
-.about-content {
+.services-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
 }
 
-.about-text h3 {
-  font-size: 1.5rem;
+.service-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(27, 49, 105, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(27, 49, 105, 0.15);
+  border-color: var(--primary-yellow);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
   color: var(--primary-blue);
   margin-bottom: 16px;
-  margin-top: 32px;
+  font-weight: 700;
 }
 
-.about-text h3:first-child {
-  margin-top: 0;
-}
-
-.about-text p {
-  line-height: 1.7;
+.service-card p {
   color: var(--text-gray);
-  font-size: 1.1rem;
-}
-
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.stat-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--primary-yellow);
-  margin-bottom: 8px;
-}
-
-.stat-label {
+  line-height: 1.6;
   font-size: 1rem;
-  color: var(--primary-blue);
-  font-weight: 600;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-container {

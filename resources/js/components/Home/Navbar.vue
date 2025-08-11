@@ -14,10 +14,10 @@
         <!-- Navigation Links -->
         <div class="flex space-x-6 items-center">
           <a href="/" class="nav-item">Home</a>
-          <a href="#about" class="nav-item">About Us</a>
-          <a href="#services" class="nav-item">Services</a>
-          <a href="#why" class="nav-item">Why Us</a>
-          <a href="#contact" class="nav-item">Contact Us</a>
+          <a href="/about-us" class="nav-item">About Us</a>
+          <a href="/service" class="nav-item">Services</a>
+          <a href="/why-us" class="nav-item">Why Us</a>
+          <a href="/contact-us" class="nav-item">Contact Us</a>
           <!-- <button @click="openQuoteModal" class="bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600 transition cursor-pointer">
             Get Free Quote
           </button> -->
@@ -55,15 +55,15 @@
       <div v-if="isMobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
         <div class="py-2 space-y-1">
           <a href="/" class="mobile-nav-item">Home</a>
-          <a href="#about" class="mobile-nav-item">About Us</a>
+          <a href="/about-us" class="mobile-nav-item">About Us</a>
           
           
           
-            <a href="#services" class="mobile-nav-item">Services</a>
+            <a href="/service" class="mobile-nav-item">Services</a>
           
           
-          <a href="#why" class="mobile-nav-item">Why Us</a>
-          <a href="#contact" class="mobile-nav-item">Contact Us</a>
+          <a href="/why-us" class="mobile-nav-item">Why Us</a>
+          <a href="/contact-us" class="mobile-nav-item">Contact Us</a>
         </div>
       </div>
     </div>

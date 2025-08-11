@@ -127,6 +127,44 @@ class HomeController extends BaseController
         ]);
     }
 
+    public function ServiceIndex () {
+    {
+        $seoData = $this->mergeSeoData([
+        // Override specific SEO data for this page
+        'title' => 'Professional Graphic Design Services',
+        'description' => 'We specialize in graphic design services, creating visually stunning and engaging designs for businesses and organizations.',
+        'keywords' => 'graphic design, branding, logo design, user-friendly websites',
+        'og_title' => 'Professional Graphic Design Services',
+        'canonical_url' => url('/services/graphic-design'),
+        'sec_img' => asset('assets/images/color-bulb.jpg'),
+
+        ]);
+
+        return Inertia::render('Services', [
+            'seo' => $seoData
+        ])->with('seo', $seoData);
+    }
+    }
+
+    public function whyUsIndex () {
+        {
+        $seoData = $this->mergeSeoData([
+        // Override specific SEO data for this page
+        'title' => 'Professional Graphic Design Services',
+        'description' => 'We specialize in graphic design services, creating visually stunning and engaging designs for businesses and organizations.',
+        'keywords' => 'graphic design, branding, logo design, user-friendly websites',
+        'og_title' => 'Professional Graphic Design Services',
+        'canonical_url' => url('/services/graphic-design'),
+        'sec_img' => asset('assets/images/color-bulb.jpg'),
+
+        ]);
+
+        return Inertia::render('WhyUs', [
+            'seo' => $seoData
+        ])->with('seo', $seoData);
+    }
+    }
+
 
     public function FaqIndex () {
     $seoData = $this->mergeSeoData([

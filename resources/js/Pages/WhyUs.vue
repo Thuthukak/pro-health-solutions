@@ -45,39 +45,51 @@
       
       <!-- Structured Data will be added via JavaScript -->
     </Head>
-  <!-- <Navbar :seo="seo"/> -->
-        <!-- About Us Section -->
-    <section class="about-section" id="about">
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" id="why">
       <div class="container">
         <div class="section-header">
-          <h2>About Pro Bill Solutions</h2>
-          <p>Your trusted partner in medical billing excellence</p>
+          <h2>Why Choose Pro Bill Solutions?</h2>
+          <p>We deliver results that matter to your practice</p>
         </div>
-        <div class="about-content">
-          <div class="about-text">
-            <h3 class="fw-bold">Our Mission</h3>
-            <p>
-              Our mission is to deliver dependable, compliant, and tailored medical billing services to doctors of every specialty. We are committed to maximizing your revenue through precise and timely billing, reducing your administrative burden, supporting your growth with personalized solutions, and staying ahead of healthcare regulations and industry changes.
-            </p>
-            <h3 class="fw-bold">Our Vision</h3>
-            <p>
-              We aim to be the most trusted and innovative medical billing partner for healthcare providers across all specialties. We empower practices with seamless, transparent, and accurate revenue cycle solutions—so you can focus on delivering exceptional patient care while we handle the business side with excellence.
-            </p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon"><font-awesome-icon :icon="['fas', 'hospital']" style="color: #ffffff;"></font-awesome-icon></div>
+            <h3>All Specialties Welcome</h3>
+            <p>From cardiology to chiropractic, family medicine to dermatology—we understand the unique billing nuances of every specialty.</p>
           </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Compliance Rate</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Support Available</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">All</div>
-              <div class="stat-label">Specialties Welcome</div>
-            </div>
+          <div class="feature-item">
+            <div class="feature-icon"><font-awesome-icon :icon="['fas', 'circle-check']" style="color: #ffffff;"></font-awesome-icon></div>
+            <h3>Compliance You Can Trust</h3>
+            <p>We stay up-to-date with HIPAA, CMS, and payer regulations so you don't have to.</p>
           </div>
+          <div class="feature-item">
+            <div class="feature-icon"><font-awesome-icon :icon="['fas', 'handshake']" style="color: #ffffff;"></font-awesome-icon></div>
+            <h3>Personalized Support</h3>
+            <p>You'll never be just another account. Our dedicated team knows your practice and is always just a call or message away.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><font-awesome-icon :icon="['fas', 'cloud']" style="color: #ffffff;"></font-awesome-icon></div>
+            <h3>Advanced Technology</h3>
+            <p>We use secure, cloud-based platforms that integrate smoothly with your existing systems for fast, accurate billing.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><font-awesome-icon :icon="['fas', 'chart-line']" style="color: #ffffff;"></font-awesome-icon></div>
+            <h3>Proven Results</h3>
+            <p>We help providers increase collections, shorten payment cycles, and reduce claim rejections—consistently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Streamline Your Revenue Cycle?</h2>
+          <p>Join countless healthcare providers who trust Pro Bill Solutions with their medical billing needs. Let us help you focus on what you do best—caring for your patients.</p>
+          <button class="btn-cta" @click="scrollToContact">Start Your Partnership Today</button>
         </div>
       </div>
     </section>
@@ -92,7 +104,7 @@ import { onMounted, computed } from 'vue'
 import { Head } from '@inertiajs/vue3'
 
 export default {
-  name: 'AboutUS',
+  name: 'WhyUs',
   components: { Layout, Head },
   props: {
     seo: {
@@ -233,67 +245,91 @@ export default {
   color: var(--primary-blue);
   transform: translateY(-2px);
 }
-/* About Section */
-.about-section {
+/* Why Choose Section */
+.why-choose-section {
   padding: 100px 0;
-  background: var(--light-gray);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
 }
 
-.about-content {
+.why-choose-section .section-header h2 {
+  color: var(--white);
+}
+
+.why-choose-section .section-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.features-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
 }
 
-.about-text h3 {
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-  margin-bottom: 16px;
-  margin-top: 32px;
-}
-
-.about-text h3:first-child {
-  margin-top: 0;
-}
-
-.about-text p {
-  line-height: 1.7;
-  color: var(--text-gray);
-  font-size: 1.1rem;
-}
-
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.stat-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 15px;
+.feature-item {
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding: 40px 20px;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
 }
 
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
+.feature-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
   color: var(--primary-yellow);
-  margin-bottom: 8px;
 }
 
-.stat-label {
+.feature-item p {
+  line-height: 1.6;
+  opacity: 0.9;
   font-size: 1rem;
-  color: var(--primary-blue);
-  font-weight: 600;
 }
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: var(--primary-yellow);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: var(--secondary-blue);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-cta {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(27, 49, 105, 0.3);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-container {
