@@ -61,16 +61,40 @@
             </a> 
           </div>
           <div class="mt-3 fw-bold"> Subscribe to our newsletter</div>
+
+          <!-- Newsletter Form -->
           <form @submit.prevent="subscribe">
             <div class="input-group mb-3 mt-2">
               <input 
                 type="email" 
                 v-model="form.email"
                 class="form-control" 
-                placeholder="Enter your email">
-              <button class="btn btn-primary" type="submit">Subscribe</button>
+                placeholder="Enter your email"
+                :disabled="isLoading">
+              <button 
+                class="btn btn-primary" 
+                type="submit"
+                :disabled="isLoading || !form.email">
+                <span v-if="isLoading" class="spinner-border spinner-border-sm me-1" role="status"></span>
+                {{ isLoading ? 'Subscribing...' : 'Subscribe' }}
+              </button>
             </div>
           </form>
+
+          <!-- Success Message -->
+          <div v-if="successMessage" class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            {{ successMessage }}
+            <button type="button" class="btn-close btn-close-white" @click="clearMessages"></button>
+          </div>
+
+          <!-- Error Message -->
+          <div v-if="errorMessage" class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            {{ errorMessage }}
+            <button type="button" class="btn-close btn-close-white" @click="clearMessages"></button>
+          </div>
+
         </div>
 
       </div>
@@ -95,19 +119,64 @@
     email: '',
   });
 
+  const isLoading = ref(false);
+  const successMessage = ref('');
+  const errorMessage = ref('');
+
+  const clearMessages = () => {
+    successMessage.value = '';
+    errorMessage.value = '';
+  };
+
   const subscribe = async () => {
+    if (!form.value.email) return;
+
+    isLoading.value = true;
+    clearMessages();
+
     try {
       const response = await axios.post('/newsletter', form.value);
-      console.log(response.data);
+      
+      // Success response
+      successMessage.value = response.data.message || 'Successfully subscribed to our newsletter!';
+      
+      // Reset form on success
+      form.value.email = '';
+      
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        successMessage.value = '';
+      }, 5000);
 
-      // Reset form
-      form.value = {
-        email: '',
-      };
     } catch (error) {
-      console.error('Form submission error:', error);
+      // Handle different error scenarios
+      if (error.response) {
+        const status = error.response.status;
+        const data = error.response.data;
+        
+        if (status === 409 || status === 422) {
+          // Email already exists or validation error
+          errorMessage.value = data.message || 'This email is already subscribed to our newsletter.';
+        } else {
+          // Other server errors
+          errorMessage.value = 'An error occurred. Please try again later.';
+        }
+      } else {
+        // Network or other errors
+        errorMessage.value = 'Network error. Please check your connection and try again.';
+      }
+      
+      console.error('Newsletter subscription error:', error);
+      
+      // Auto-hide error message after 7 seconds
+      setTimeout(() => {
+        errorMessage.value = '';
+      }, 7000);
+    } finally {
+      isLoading.value = false;
     }
-  }
+  };
+
   const currentYear = ref(new Date().getFullYear());
 </script>
 
@@ -169,5 +238,27 @@ h5 {
   color: var(--primary-blue);
   transform: translateY(-2px);
 }
+
+/* Custom alert styles for better visibility on dark background */
+  .alert-success {
+    background-color: rgba(25, 135, 84, 0.9);
+    border-color: rgba(25, 135, 84, 0.9);
+    color: white;
+  }
+  
+  .alert-warning {
+    background-color: rgba(255, 168, 7, 0.849);
+    border-color: rgba(255, 147, 7, 0.9);
+    color: #000;
+  }
+  
+  .btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+  
+  .spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+  }
 
 </style>
